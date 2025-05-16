@@ -1,4 +1,17 @@
+import { useState } from "react";
+
 const Home = () => {
+
+    const [openFAQs, setOpenFAQs] = useState(Array(6).fill(false));
+
+    const toggleFAQ = (index) => {
+        setOpenFAQs((prev) => {
+            const updated = [...prev];
+            updated[index] = !updated[index];
+            return updated;
+        });
+    };
+
     return ( 
         <div className="home">
             <div className="cont">
@@ -87,6 +100,47 @@ const Home = () => {
                             <div className="text">
                                 <h1>Coverage across Germany</h1>
                             </div>
+                        </div>
+                    </div>
+                </section>
+                <section className="faq">
+                    <h1>Frequently Asked Questions. (FAQ)</h1>
+                    <div className="cards">
+                        <div className="card" onClick={() => toggleFAQ(0)}>
+                            <h1>How can I book a ride?</h1>
+                            <p className={`faq-answer ${openFAQs[0] ? 'open' : ''}`}>
+                                You can book a ride through our website, by phone, or via WhatsApp. We recommend booking at least 24 hours in advance, especially for medical appointments.
+                            </p>
+                        </div>
+                        <div className="card" onClick={() => toggleFAQ(1)}>
+                            <h1>Do you provide wheelchair-accessible vehicles?</h1>
+                            <p className={`faq-answer ${openFAQs[1] ? 'open' : ''}`}>
+                                Yes, we offer vehicles equipped to accommodate wheelchairs and mobility aids. Please mention your requirements when booking.
+                            </p>
+                        </div>
+                        <div className="card" onClick={() => toggleFAQ(2)}>
+                            <h1>Can I schedule regular transportation (e.g., weekly appointments)?</h1>
+                            <p className={`faq-answer ${openFAQs[2] ? 'open' : ''}`}>
+                                Absolutely. We offer scheduled recurring rides for patients who need regular transportation to medical facilities or therapy sessions.
+                            </p>
+                        </div>
+                        <div className="card" onClick={() => toggleFAQ(3)}>
+                            <h1>Do you offer transportation outside of city limits?</h1>
+                            <p className={`faq-answer ${openFAQs[3] ? 'open' : ''}`}>
+                                Yes, we provide long-distance transportation to hospitals, airports, and clinics across Germany.
+                            </p>
+                        </div>
+                        <div className="card" onClick={() => toggleFAQ(4)}>
+                            <h1>What safety measures do your drivers follow?</h1>
+                            <p className={`faq-answer ${openFAQs[4] ? 'open' : ''}`}>
+                                Our drivers are trained in patient care and follow strict hygiene and safety protocols, including vehicle sanitization and courteous assistance.
+                            </p>
+                        </div>
+                        <div className="card" onClick={() => toggleFAQ(5)}>
+                            <h1>What languages do your drivers speak?</h1>
+                            <p className={`faq-answer ${openFAQs[5] ? 'open' : ''}`}>
+                                Our drivers speak German and English. If you need assistance in another language, please let us know in advance.
+                            </p>
                         </div>
                     </div>
                 </section>
