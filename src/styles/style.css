@@ -656,4 +656,52 @@ footer small {
   footer small {
     font-size: 11px;
   }
+}
+
+.nomatch {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+  background-color: #f5f5f5;
+  padding: 20px;
+}
+.nomatch .not-found-content {
+  text-align: center;
+}
+.nomatch .not-found-content h1 {
+  font-size: 120px;
+  color: #89488a;
+  margin-bottom: 20px;
+}
+.nomatch .not-found-content h2 {
+  font-size: 32px;
+  color: #333;
+  margin-bottom: 10px;
+}
+.nomatch .not-found-content p {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 30px;
+}
+.nomatch .not-found-content .home-btn {
+  display: inline-block;
+  background-color: #89488a;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+.nomatch .not-found-content .home-btn:hover {
+  background-color: #6e3b6f;
+}
+@media (max-width: 768px) {
+  .nomatch .not-found-content h1 {
+    font-size: 80px;
+  }
+  .nomatch .not-found-content h2 {
+    font-size: 24px;
+  }
 }/*# sourceMappingURL=style.css.map */
