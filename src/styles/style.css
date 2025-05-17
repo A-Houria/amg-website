@@ -638,6 +638,81 @@
   cursor: default;
 }
 
+.contact .wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 100px;
+  background-color: #f4f4f4;
+  margin: 50px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+}
+@media screen and (max-width: 560px) {
+  .contact .wrapper {
+    padding: 50px;
+  }
+}
+.contact .wrapper h1 {
+  font-size: 48px;
+  font-weight: 400;
+  color: #89488a;
+  margin-bottom: 100px;
+}
+@media screen and (max-width: 475px) {
+  .contact .wrapper h1 {
+    margin-bottom: 50px;
+    font-size: 38px;
+  }
+}
+.contact .wrapper .cards {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+}
+@media screen and (max-width: 850px) {
+  .contact .wrapper .cards {
+    flex-direction: column;
+  }
+}
+.contact .wrapper .cards .card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 850px) {
+  .contact .wrapper .cards .card {
+    margin: 50px 0px;
+  }
+}
+.contact .wrapper .cards .card img {
+  width: 100px;
+  aspect-ratio: 1/1;
+}
+.contact .wrapper .cards .card h1 {
+  margin: 25px;
+  font-size: 32px;
+  letter-spacing: 2px;
+}
+@media screen and (max-width: 475px) {
+  .contact .wrapper .cards .card h1 {
+    font-size: 28px;
+    margin: 50px 0px;
+  }
+}
+.contact .wrapper .cards .card p {
+  letter-spacing: 2px;
+  font-size: 16px;
+}
+@media screen and (max-width: 475px) {
+  .contact .wrapper .cards .card p {
+    font-size: 14px;
+  }
+}
+
 footer {
   display: flex;
   flex-direction: column;
