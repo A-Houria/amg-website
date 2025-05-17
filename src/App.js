@@ -9,6 +9,7 @@ import {
 import Home from "./Home";
 import NoMatch from "./NoMatch";
 import About from "./About";
+import Services from "./Services";
 
 function App() {
   const [isSticky, setIsSticky] = useState(false);
@@ -100,6 +101,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
+        <Route path="/services" element={<Services />} />
         <Route path="*" element={<NoMatch />} />
       </Routes>
       <footer>

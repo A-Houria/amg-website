@@ -70,7 +70,7 @@
       padding: 0.3rem 1rem;
       color: white;
       text-decoration: none;
-      transition: color 0.3s ease;
+      transition: all 0.3s ease;
     }
 
     .active {
@@ -522,6 +522,84 @@
   }
 }
 
+.services {
+  .banner {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 40vh;
+    background-color: #f9f9f9;
+    color: #89488a;
+    h1 {
+      font-size: 48px;
+      font-weight: 400;
+      letter-spacing: 3px;
+    }
+  }
+  .service {
+    display: flex;
+    flex-direction: column;
+    &:nth-child(odd) {
+      .text {
+        flex-direction: row-reverse;
+        @media screen and (max-width: 1050px) {
+          flex-direction: column;
+        }
+      }
+    }
+    .image {
+      img {
+        width: 100%;
+        aspect-ratio: 4/1;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+
+        @media screen and (max-width: 600px) {
+          aspect-ratio: 4/2;
+        }
+      }
+    }
+    .text {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding: 50px 0px;
+      @media screen and (max-width: 1050px) {
+        flex-direction: column;
+      }
+      .title,
+      .disc {
+        flex: 1;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        min-height: 30vh;
+        text-align: center;
+
+        h1 {
+          font-size: 38px;
+          font-weight: 400;
+          color: #89488a;
+        }
+        p {
+          font-size: 18px;
+          width: 80%;
+          line-height: 1.75;
+          letter-spacing: 2px;
+          transition: all 0.3s ease;
+          &:hover {
+            color: #89488a;
+            transform: scale(1.1);
+            cursor: default;
+          }
+        }
+      }
+    }
+  }
+}
+
 footer {
   display: flex;
   flex-direction: column;
@@ -565,12 +643,20 @@ footer {
     .navi {
       list-style: none;
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
       align-items: center;
+      @media screen and (max-width: 1200px) {
+        flex-direction: column;
+      }
       @media screen and (max-width: 850px) {
         align-items: flex-start;
       }
       li {
+        padding: 0px 20px;
+        transition: all 0.3s ease;
+        &:hover {
+          transform: scale(1.2);
+        }
         a {
           text-decoration: none;
           color: white;
@@ -595,6 +681,10 @@ footer {
         width: 35px;
         margin: 0px 10px;
         cursor: pointer;
+        transition: all 0.3s ease;
+        &:hover {
+          transform: scale(1.2);
+        }
       }
     }
   }
