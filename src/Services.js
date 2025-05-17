@@ -1,14 +1,26 @@
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 const Services = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+  }, []);
+
   return (
     <div className="services">
-      <section className="banner">
+      <section className="banner" data-aos="fade-down">
         <h1>Our Services</h1>
       </section>
-      <section className="service">
-        <div className="image">
+
+      <section className="service" data-aos="fade-up">
+        <div className="image" data-aos="zoom-in">
           <img src="/Media/airport-service.jpg" alt="Airport Transfers" />
         </div>
-        <div className="text">
+        <div className="text" data-aos="fade-left">
           <div className="title">
             <h1>Airport Transfers</h1>
           </div>
@@ -21,11 +33,12 @@ const Services = () => {
           </div>
         </div>
       </section>
-      <section className="service">
-        <div className="image">
+
+      <section className="service" data-aos="fade-up">
+        <div className="image" data-aos="zoom-in">
           <img src="/Media/medical-service.jpg" alt="Medical Transportation" />
         </div>
-        <div className="text">
+        <div className="text" data-aos="fade-left">
           <div className="title">
             <h1>Medical Transportation</h1>
           </div>
@@ -38,11 +51,12 @@ const Services = () => {
           </div>
         </div>
       </section>
-      <section className="service">
-        <div className="image">
+
+      <section className="service" data-aos="fade-up">
+        <div className="image" data-aos="zoom-in">
           <img src="/Media/leasing-service.jpg" alt="Car Leasing" />
         </div>
-        <div className="text">
+        <div className="text" data-aos="fade-left">
           <div className="title">
             <h1>Car Leasing</h1>
           </div>
@@ -55,14 +69,15 @@ const Services = () => {
           </div>
         </div>
       </section>
-      <section className="service">
-        <div className="image">
+
+      <section className="service" data-aos="fade-up">
+        <div className="image" data-aos="zoom-in">
           <img
             src="/Media/door-to-door-service.jpg"
             alt="Door-to-Door Service"
           />
         </div>
-        <div className="text">
+        <div className="text" data-aos="fade-left">
           <div className="title">
             <h1>Door-to-Door Service</h1>
           </div>
@@ -75,14 +90,15 @@ const Services = () => {
           </div>
         </div>
       </section>
-      <section className="service">
-        <div className="image">
+
+      <section className="service" data-aos="fade-up">
+        <div className="image" data-aos="zoom-in">
           <img
             src="/Media/on-demand-service.jpg"
             alt="Scheduled & On-Demand Rides"
           />
         </div>
-        <div className="text">
+        <div className="text" data-aos="fade-left">
           <div className="title">
             <h1>Scheduled & On-Demand Rides</h1>
           </div>

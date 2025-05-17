@@ -559,6 +559,9 @@
   }
 }
 
+.services {
+  overflow: hidden;
+}
 .services .banner {
   display: flex;
   flex-direction: row;

@@ -1,13 +1,25 @@
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 const About = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+  }, []);
+
   return (
     <div className="about">
-      <section className="hero">
+      <section className="hero" data-aos="fade-up">
         <img
           className="hero-image"
           src="/Media/about-hero.jpg"
           alt="hero image"
+          data-aos="zoom-in"
         />
-        <div className="cont">
+        <div className="cont" data-aos="fade-left">
           <h1>Driven by Care. Powered by Trust.</h1>
           <div className="line"></div>
           <p>
@@ -18,23 +30,24 @@ const About = () => {
           </p>
         </div>
       </section>
-      <section className="analytics">
-        <div className="card">
+
+      <section className="analytics" data-aos="fade-up">
+        <div className="card" data-aos="flip-left">
           <h1>24/7</h1>
           <p>ready when you need us.</p>
         </div>
-        <div className="card">
+        <div className="card" data-aos="flip-left">
           <h1>Nationwide Coverage</h1>
           <p>Wherever you are, we’ll get you there.</p>
         </div>
-        <div className="card">
+        <div className="card" data-aos="flip-left">
           <h1>Patient First</h1>
           <p>Compassionate rides, every time.</p>
         </div>
       </section>
 
-      <section className="process">
-        <div className="cont">
+      <section className="process" data-aos="fade-up">
+        <div className="cont" data-aos="fade-right">
           <img src="/Media/proccess_1.png" alt="Book Your Ride" />
           <div className="text">
             <h1>Book Your Ride</h1>
@@ -46,8 +59,9 @@ const About = () => {
           </div>
         </div>
       </section>
-      <section className="process">
-        <div className="cont">
+
+      <section className="process" data-aos="fade-up">
+        <div className="cont" data-aos="fade-left">
           <img src="/Media/proccess_2.jpg" alt="Travel Comfortably" />
           <div className="text">
             <h1>Travel Comfortably</h1>
@@ -61,8 +75,9 @@ const About = () => {
           </div>
         </div>
       </section>
-      <section className="process">
-        <div className="cont">
+
+      <section className="process" data-aos="fade-up">
+        <div className="cont" data-aos="fade-right">
           <img src="/Media/proccess_3.jpg" alt="Arrive Stress-Free" />
           <div className="text">
             <h1>Arrive Stress-Free</h1>
