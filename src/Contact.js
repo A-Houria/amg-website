@@ -18,12 +18,12 @@ const Contact = () => {
           <div className="card" data-aos="fade-up">
             <img src="/Media/phone.png" alt="Phone" />
             <h1>By Phone</h1>
-            <p>+49 1111-111-11111</p>
+            <p>+49 173-467-1667</p>
           </div>
           <div className="card" data-aos="fade-up">
             <img src="/Media/mail.png" alt="email" />
             <h1>By email</h1>
-            <p>info@amgmobilitysolutions.de</p>
+            <p>info@amgmobilitysolutions.com</p>
           </div>
         </div>
       </div>
